@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeekStore - Sua Loja Geek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">GeekStore</a>
+            
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Buscar produtos...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <div class="dropdown">
+                    <i class="fas fa-user" data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Meus Dados</a></li>
+                        <li><a class="dropdown-item" href="#">Cartões</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <i class="fas fa-heart" data-bs-toggle="dropdown"></i>
+                    <div class="dropdown-menu favorites-dropdown" id="favoritesDropdown">
+                        <!-- Favorites items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <i class="fas fa-shopping-cart" data-bs-toggle="dropdown"></i>
+                    <div class="dropdown-menu cart-dropdown" id="cartDropdown">
+                        <!-- produtos do carrinhos vao brotar aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Menu -->
+    <nav class="main-menu">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="#products" class="dropdown-toggle">Produtos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#action-figures">Action Figures</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#collectibles">Colecionáveis</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#accessories" class="dropdown-toggle">Acessórios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#mugs">Canecas</a></li>
+                        <li><a href="#phone-cases">Cases</a></li>
+                        <li><a href="#mousepads">Mousepads</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#fashion" class="dropdown-toggle">Moda</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#tshirts">Camisetas</a></li>
+                        <li><a href="#hoodies">Moletons</a></li>
+                        <li><a href="#caps">Bonés</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="galeria\harry-potter-hogwarts-castle-at-night-w0xxzd74btz8tc7l.jpg" class="d-block w-100" alt="Promoção 1">
+            </div>
+            <div class="carousel-item">
+                <img src="galeria\551ccc08-3ed9-46d0-b971-32aa9283999f.jpeg" class="d-block w-100" alt="Promoção 2">
+            </div>
+            <div class="carousel-item">
+                <img src="galeria\dragon-ball-z-aj4odinz1vo02umq.jpg" class="d-block w-100" alt="Promoção 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2>Quem Somos</h2>
+        <p>Somos a maior loja geek do Brasil, trazendo produtos exclusivos para os verdadeiros fãs de cultura pop, games, animes e muito mais!</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container my-5">
+        <h2>Produtos</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="productsContainer">
+            <!-- inserir produtos aqui -->
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="container my-5">
+        <h2>Acessórios</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="accessoriesContainer">
+            <!-- inserir acessórios aqui -->
+        </div>
+    </section>
+
+    <!-- Fashion Section -->
+    <section id="fashion" class="container my-5">
+        <h2>Moda</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="fashionContainer">
+            <!-- inserir produtos de moda aqui -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Ouvidoria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Redes Sociais</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
